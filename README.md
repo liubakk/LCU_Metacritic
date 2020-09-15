@@ -1,15 +1,20 @@
-# hello-world
-I stay out too late, got nothin' in my brain
-That's what people say, mmm hmm, that's what people say, mmm hmm
-I go on too many dates, but I can't make 'em stay
-At least that's what people say mmm mmm, that's what people say mmm mmm
-But I keep cruising, can't stop, won't stop moving
-It's like I got this music in my mind, sayin' gonna be alright
-'Cause the players gonna play, play, play, play, play
-And the haters gonna hate, hate, hate, hate, hate
-Baby, I'm just gonna shake, shake, shake, shake, shake
-I shake it off, I shake it off
-Heartbreakers gonna break, break, break, break, break
-And the fakers gonna fake, fake, fake, fake, fake
-Baby, I'm just gonna shake, shake, shake, shake, shake
-I shake it off, I shake it off
+Datascrapping using BeautifulSoup package from metacritic.com
+
+metacritic_all_ea.ipynb
+includes all titles from this page: https://www.metacritic.com/company/electronic-arts
+
+metacritic_all_reviewed_titles.ipynb
+includes all titles from this page: https://www.metacritic.com/browse/games/score/metascore/all/all/filtered?view=condensed
+
+Data is stored in the following columns:
+'DATE_ID','PUBLISHER','TITLE_URL', 'TITLE_NAME', 'PLATFORM','TITLE_GENRE', 'RELEASE_DATE_ID',
+'METASCORE', 'CRITIC_REVIEWS_COUNT','POS_CRITIC_REVIEWS_COUNT','MIX_CRITIC_REVIEWS_COUNT','NEG_CRITIC_REVIEWS_COUNT',
+'AGV_USER_SCORE', 'USER_RATINGS_COUNT', 'POS_USER_REVIEWS_COUNT','MIX_USER_REVIEWS_COUNT','NEG_USER_REVIEWS_COUNT'
+
+Data clean-up
+Titles excluded: mobile, missing metacritic score, not releases or cancelled.
+
+Script optimisation
+Python script includes a progress bar and outputs processing times for optimisation puposes.
+
+The data scrapped in then loaded into a Snowflake table using snowflake.connector
