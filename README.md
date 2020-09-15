@@ -12,11 +12,11 @@ Data is stored in the following columns:
 'METASCORE', 'CRITIC_REVIEWS_COUNT','POS_CRITIC_REVIEWS_COUNT','MIX_CRITIC_REVIEWS_COUNT','NEG_CRITIC_REVIEWS_COUNT',
 'AGV_USER_SCORE', 'USER_RATINGS_COUNT', 'POS_USER_REVIEWS_COUNT','MIX_USER_REVIEWS_COUNT','NEG_USER_REVIEWS_COUNT'
 
-Data clean-up
-Titles excluded: mobile, missing metacritic score, not releases or cancelled.
+Data clean-up:
+Titles excluded are mobile, missing metacritic score, not releases or cancelled.
 
-Script optimisation
-Python script includes a progress bar and outputs processing times for optimisation puposes.
+Script optimisation:
+The Python script includes a progress bar and outputs processing times for optimisation puposes.
 
 2.
 The data scrapped in then loaded into a Snowflake table using snowflake.connector
