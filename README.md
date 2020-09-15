@@ -1,3 +1,4 @@
+1.
 Datascrapping using BeautifulSoup package from metacritic.com
 
 metacritic_all_ea.ipynb
@@ -17,4 +18,5 @@ Titles excluded: mobile, missing metacritic score, not releases or cancelled.
 Script optimisation
 Python script includes a progress bar and outputs processing times for optimisation puposes.
 
+2.
 The data scrapped in then loaded into a Snowflake table using snowflake.connector
